@@ -1,0 +1,37 @@
+﻿<div class="customers view">
+    <div class="container">
+        <header>
+            <h3>Users</h3>
+        </header>
+
+        <div class="row">
+            <div class="span3">
+                Name:
+                <br />
+                <input data-ng-model="newUser.name" type="text" placeholder="First Name">
+            </div>
+            <div class="span3">
+                Email:
+                <br />
+                <input data-ng-model="newUser.email" type="text" placeholder="Email">
+                <button id="submitUser" class="btn btn-primary" type="button" 
+                    data-ng-disabled="!newUser.name || !newUser.email " 
+                    data-ng-click="insertUser()">Add User</button>
+            </div>
+        </div>
+
+        <br /><br />
+        <div>
+            <div class="row cardContainer">
+                <div class="span3 card" data-ng-repeat="user in users ">
+                    <button class="btn close cardClose" data-ng-click="deleteUser(user.id)">&times;</button>
+                    <div class="cardHeader">{{user.name}}</div>
+                    <div class="cardBody">   
+                     {{'Edad:' + user.edad + '. Peso: ' + user.peso + 'Kg Altura:' + user.altura + 'cm' }} 
+                    <a href="#/userDetail/{{user.id}}" class="cardBody btn-link">View {{ user.name }} stats</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

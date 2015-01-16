@@ -1,0 +1,9 @@
+{
+  "name": "muscleApp",
+  "main": "server.js",
+  "dependencies": {
+    "express" : "latest",
+    "mongodb" : "latest",
+	"mongoose" : "latest"
+  }
+}

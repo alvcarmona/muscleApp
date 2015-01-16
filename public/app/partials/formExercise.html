@@ -1,0 +1,36 @@
+<div class="row">
+     <div class="span3">
+        <div class="exerciseForm">
+            <form role="form">
+                <div class="form-group">
+                    <label>Ejercicio</label>
+                        <select class="form-control" data-ng-model="newExercise.musculo">
+                            <option>Pecho</option>
+                            <option>Biceps</option>
+                            <option>Triceps</option>
+                            <option>Pierna</option>
+                            <option>Espalda</option>
+                            <option>Hombro</option>
+                            <option>Trapecio</option>
+                        </select>
+                </div>
+            </form>
+        </div> 
+    </div>
+     <div class="span3">
+        <div class="form-group">
+            <label>Nombre del ejercicio</label>
+            <input data-ng-model="newExercise.descripcion" type="text" placeholder="descripcion">
+            <p class="help-block">p.e. Curl con barra</p>
+        </div>
+    </div>
+     <div class="span6">
+        <div class="form-group">
+            <label>Peso</label>
+            <input  data-ng-model="newExercise.peso" type="number" placeholder="peso">
+           <button id="submitExercise" class="btn btn-primary" type="button" 
+                    data-ng-click="insertExercise()">Add exercise</button>
+        </div>
+     </div>
+
+</div>

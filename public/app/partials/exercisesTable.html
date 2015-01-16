@@ -1,0 +1,39 @@
+﻿
+
+
+
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                       
+                        <div class="panel-heading">
+                           
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body"  data-ng-repeat="musculo in user.musculos ">
+                             {{musculo.nombre}}
+                            <div class="table-responsive" data-ng-controller="OrderExerciseController">
+
+                                <table class="table table-striped table-bordered table-hover">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Exercise name</th>
+                                            <th>Last try date</th>
+                                            <th>Last try weight</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody >
+                                        <tr data-ng-repeat="ejercicio in musculo.ejercicios ">
+                                            <td>{{ejercicio.nombre}}</td>
+                                            <td>{{ejercicio.intento[0].fecha | date : medium}}</td>
+                                            <td>{{ejercicio.intento[0].peso}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
